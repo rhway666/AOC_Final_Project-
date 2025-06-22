@@ -25,6 +25,6 @@ var_int_log.txt
 .DS_Store
 
 # try code
-hook.py
-hook_act.py
-try_modules.ipynb_checkpoints
+.hook.py
+.hook_act.py
+.try_modules.ipynb
