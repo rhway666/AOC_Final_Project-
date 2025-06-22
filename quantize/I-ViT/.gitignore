@@ -1,0 +1,30 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# PyTorch checkpoints & weights
+checkpoint.pth.tar
+weights_fp/
+
+# Log files
+*.log
+
+# Intermediate/output directories
+results/
+results_final/
+results_org/
+test_text/
+
+# Miscellaneous
+var_int_log.txt
+
+# macOS
+.DS_Store
+
+# try code
+hook.py
+hook_act.py
+try_modules.ipynb_checkpoints
