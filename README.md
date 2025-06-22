@@ -1,17 +1,30 @@
 # My Project: AoC Final
 
-Welcome to my project repository for AoC Final. This project focuses on [簡短描述你的專案目標，例如模型量化、效能分析等].
+Welcome to the AoC Final project repository. This work addresses the challenges of deploying the DeiT image-classification model on resource-constrained devices by introducing a systolic-array-based hardware accelerator with an integrated non-linear module, enabling full-model computation on the edge.
+
+DeiT relies heavily on linear operations within its attention layers, which become the primary bottleneck for real-time inference on low-power hardware. To overcome this, we designed and implemented a dedicated systolic-array accelerator tailored to the matrix multiplications and linear projections in DeiT. Our accelerator:
+
+- **Maximizes performance** through parallelized linear operations, significantly reducing execution time.  
+- **Improves energy efficiency** and is optimized for low-power, edge-device requirements.  
+- **Preserves model accuracy**, enabling real-time inference without compromising classification quality.
+
+Experimental results demonstrate that our accelerator successfully speeds up the key computation modules of the DeiT model, offering a practical hardware solution for Transformer architectures in edge-computing scenarios. This project paves the way for deploying deep learning models in environments with strict resource limitations.
 
 ## Overview
 
-This repository contains code and resources for [進一步描述你的專案，例如 DeiT 模型的量化與分析]. Note that large model files and weights are excluded from this repository to keep it lightweight. Instructions for downloading the necessary files are provided below.
+This repository contains code and resources for:
+
+- **Performance Analysis**: scripts and notebooks for profiling and evaluating DeiT’s linear operations on the accelerator.  
+- **Quantization Pipeline**: PyTorch-based tools to quantize DeiT weights and activations for low-precision inference.  
+- **Hardware Implementation**: RTL sources, testbenches, and synthesis scripts for the systolic-array accelerator with non-linear module support.
+
+> **Note:** Large model files and weights are excluded to keep the repo lightweight. See **Setup Instructions** below for download links and steps.
 
 ## Setup Instructions
-There are three main sections in our repo
-1. analysis
-2. quantization
-3. hardware
-please cd into the folder for more information
+
+There are three main folders—`analysis/`, `quantization/`, and `hardware/`.  
+Each folder contains its own README with detailed usage and examples. To get started:
+
 
 ### Prerequisites
 - Python 3.10
