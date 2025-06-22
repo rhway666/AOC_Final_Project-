@@ -1,0 +1,6 @@
+
+checkpoint.pth.tar
+*.safetensors
+*.tar
+
+analysis/deit_tiny_distilled-patch16-224/model.safetensors
