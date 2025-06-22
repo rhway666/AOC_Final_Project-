@@ -211,8 +211,8 @@ class VisionTransformer(nn.Module):
                     drop=drop_rate,
                     attn_drop=attn_drop_rate,
                     drop_path=dpr[i],
-                    # act_layer=IntGELU_HWF,
-                    act_layer=IntGELU,
+                    act_layer=IntGELU_HWF,  # change here
+                    # act_layer=IntGELU,    # change here
                     norm_layer=norm_layer
                 )
                 for i in range(depth)
@@ -296,8 +296,8 @@ def deit_tiny_patch16_224(pretrained=False, **kwargs):
         num_heads=3,
         mlp_ratio=4,
         qkv_bias=True,
-        norm_layer=partial(IntLayerNorm_LUT, eps=1e-6),
-        # norm_layer=partial(IntLayerNorm, eps=1e-6),
+        norm_layer=partial(IntLayerNorm_LUT, eps=1e-6), # change here
+        # norm_layer=partial(IntLayerNorm, eps=1e-6),   # change here
         **kwargs,
     )
     if pretrained:
